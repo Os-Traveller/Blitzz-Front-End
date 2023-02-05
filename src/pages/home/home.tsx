@@ -1,7 +1,9 @@
+import { Navbar } from "../../components/navbar/navbar";
+
 export function Home() {
   return (
-    <div>
-      <h1>Home : Blitzz</h1>
-    </div>
+    <section>
+      <Navbar />
+    </section>
   );
 }
