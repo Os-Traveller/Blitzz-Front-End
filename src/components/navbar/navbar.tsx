@@ -1,5 +1,6 @@
+import { ProfileIcon } from "../shared/profile_icon/profileIcon";
 import { Logo } from "./logo";
-import { ProfileIcon } from "../profileIcon/profileIcon";
+
 import { Search } from "./search";
 
 export function Navbar() {

@@ -36,4 +36,7 @@ body {
   .animation {
     @apply transition-all duration-300;
   }
+  .button {
+    @apply px-5 py-2 rounded-md hover:bg-primary-500;
+  }
 }

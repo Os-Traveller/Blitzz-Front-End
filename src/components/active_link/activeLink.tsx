@@ -2,12 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 
 type ActiveLinkProps = {
   title: string;
-  Icon: React.FC;
+  icon: any;
   to: string;
 };
 
-export function ActiveLink({ to, title, Icon }: ActiveLinkProps) {
-  const activeStyle = ``;
+export function ActiveLink({ to, title, icon }: ActiveLinkProps) {
   const location = useLocation();
 
   return (
@@ -17,7 +16,7 @@ export function ActiveLink({ to, title, Icon }: ActiveLinkProps) {
           to === location.pathname ? "bg-main text-white" : ""
         } rounded-md flex gap-3 items-center  py-2 px-4 hover:bg-slate-400 hover:text-white animation`}
       >
-        <Icon />
+        {icon}
         <span>{title}</span>
       </p>
     </Link>

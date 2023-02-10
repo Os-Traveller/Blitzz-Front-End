@@ -9,7 +9,7 @@ export function Logo({ size = "40px" }: LogoProps) {
     <div className="center_y gap-3 logo cursor-pointer w-fit">
       <span
         style={{ height: size, width: size, borderRadius: "10px" }}
-        className="bg-primary center_xy text-white text-2xl"
+        className="bg-primary-500 hover:bg-primary-600 animation center_xy text-white text-2xl"
       >
         <BsFillLightningFill />
       </span>

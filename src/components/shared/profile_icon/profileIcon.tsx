@@ -1,4 +1,4 @@
-import dp from "../../img/DP.jpg";
+import dp from "../../../img/DP.jpg";
 
 type ProfileIconProps = {
   size?: string;

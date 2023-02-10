@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import { GlobalLayout } from "../layout/globalLayout";
-import { Feed } from "../pages/feed/feed";
+import { FeedPage } from "../pages/feed/feedPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <GlobalLayout>
-        <Feed />
+        <FeedPage />
       </GlobalLayout>
     ),
     children: [],
