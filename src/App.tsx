@@ -1,20 +1,11 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home } from "./pages/home/home";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/router";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-      children: [],
-    },
-    { path: "/login", element: <>Login</> },
-    { path: "/signup", element: <>Sign Up</> },
-  ]);
   return (
-    <main className="bg-whiteGray dark:bg-black dark:text-white text-main h-screen">
+    <section className="bg-whiteGray dark:bg-black dark:text-white text-main h-screen">
       <RouterProvider router={router} />
-    </main>
+    </section>
   );
 }
 

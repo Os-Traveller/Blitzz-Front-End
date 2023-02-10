@@ -7,7 +7,7 @@ export function Search() {
         <RiSearchLine />
       </label>
       <input
-        className="w-full outline-none bg-transparent"
+        className="w-full py-1 outline-none bg-transparent"
         id="search"
         type="text"
         placeholder="Search For Something Here..."
