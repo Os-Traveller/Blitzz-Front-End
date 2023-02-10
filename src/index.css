@@ -33,4 +33,7 @@ body {
   .center_xy {
     @apply flex justify-center items-center;
   }
+  .animation {
+    @apply transition-all duration-300;
+  }
 }

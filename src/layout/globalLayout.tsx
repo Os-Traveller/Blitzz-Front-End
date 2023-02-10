@@ -21,17 +21,16 @@ export function GlobalLayout(props: any) {
         <Navbar />
       </header>
       {/*  */}
-      <main className=" h-full grid grid-cols-[400px_1fr_400px]">
-        <div className="">
+      <main className=" h-full grid grid-cols-[250px_1fr_250px]">
+        <div className="p-5">
           <LeftSidebar />
         </div>
-        <div
-          style={{ height: `${windowHeight - navbarHeight}px` }}
-          className="overflow-y-scroll p-4"
-        >
-          {props.children}
+        <div style={{ height: `${windowHeight - navbarHeight}px`, padding: "15px" }}>
+          <div className="overflow-y-scroll p-10 rounded-2xl bg-whiteGray dark:bg-black h-full">
+            {props.children}
+          </div>
         </div>
-        <div className="">
+        <div className="p-5">
           <RightSidebar />
         </div>
       </main>
