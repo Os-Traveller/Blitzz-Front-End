@@ -4,17 +4,40 @@ import { CiGrid31 } from "react-icons/ci";
 import { RiMessage2Line } from "react-icons/ri";
 import { BiUser } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
-import { MdLogout } from "react-icons/md";
+import { MdLogout, MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { useState } from "react";
+import { getTheme, setTheme } from "../../functions/theme";
 
 export function LeftSidebar() {
+  const [userTheme, setUserTheme] = useState<string>(getTheme());
+
+  const styleClass = `flex gap-3 items-center  py-2 px-4 hover:bg-slate-400 hover:text-white animation cursor-pointer rounded-md`;
+
   return (
     <div className="flex flex-col gap-2">
       <ActiveLink to="/" title="Feed" icon={<CiGrid31 />} />
-      <ActiveLink to="/commuinity" title="My Community" icon={<BsPeople />} />
-      <ActiveLink to="/messeages" title="Messeages" icon={<RiMessage2Line />} />
+      <ActiveLink to="/community" title="My Community" icon={<BsPeople />} />
+      <ActiveLink to="/messages" title="Messages" icon={<RiMessage2Line />} />
       <ActiveLink to="/profile" title="Profile" icon={<BiUser />} />
       <ActiveLink to="/setting" title="Setting" icon={<IoSettingsOutline />} />
-      <p className="flex gap-3 items-center  py-2 px-4 hover:bg-slate-400 hover:text-white animation cursor-pointer rounded-md">
+
+      {/* theming option */}
+      <p className={styleClass} onClick={() => setTheme(userTheme, setUserTheme)}>
+        {/* for light mode mode */}
+        {userTheme === "light" && (
+          <>
+            <MdOutlineDarkMode /> <span>Dark Mode</span>
+          </>
+        )}
+        {/* for dark mode */}
+        {userTheme === "dark" && (
+          <>
+            <MdOutlineLightMode /> <span>Light Mode</span>
+          </>
+        )}
+      </p>
+
+      <p className={styleClass}>
         <MdLogout />
         <span>Logout</span>
       </p>
