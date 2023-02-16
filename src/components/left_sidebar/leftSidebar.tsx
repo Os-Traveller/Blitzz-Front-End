@@ -1,7 +1,7 @@
 import { ActiveLink } from "../active_link/activeLink";
 import { BsPeople } from "react-icons/bs";
 import { CiGrid31 } from "react-icons/ci";
-import { RiMessage2Line } from "react-icons/ri";
+import { AiOutlineComment } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { MdLogout, MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
@@ -17,7 +17,7 @@ export function LeftSidebar() {
     <div className="flex flex-col gap-2">
       <ActiveLink to="/" title="Feed" icon={<CiGrid31 />} />
       <ActiveLink to="/community" title="My Community" icon={<BsPeople />} />
-      <ActiveLink to="/messages" title="Messages" icon={<RiMessage2Line />} />
+      <ActiveLink to="/messages" title="Messages" icon={<AiOutlineComment />} />
       <ActiveLink to="/profile" title="Profile" icon={<BiUser />} />
       <ActiveLink to="/setting" title="Setting" icon={<IoSettingsOutline />} />
 
