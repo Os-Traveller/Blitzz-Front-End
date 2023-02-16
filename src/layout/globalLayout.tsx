@@ -20,16 +20,20 @@ export function GlobalLayout(props: any) {
       <header ref={ref}>
         <Navbar />
       </header>
-      {/*  */}
       <main className=" h-full grid grid-cols-[250px_1fr_250px]">
+        {/* left sidebar */}
         <div className="p-5">
           <LeftSidebar />
         </div>
+
+        {/* main content of page */}
         <div style={{ height: `${windowHeight - navbarHeight}px`, padding: "15px" }}>
           <div className="overflow-y-scroll p-10 rounded-2xl bg-whiteGray dark:bg-black h-full">
             {props.children}
           </div>
         </div>
+
+        {/* right sidebar */}
         <div className="p-5">
           <RightSidebar />
         </div>
